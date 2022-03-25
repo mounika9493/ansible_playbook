@@ -3,5 +3,5 @@
 
  webpackforubuntu: apache2
  webpackforredhat: httpd
- javapackforubuntu: openjdk-8-jre 
+ javapackforubuntu: openjdk-8-jreeeeeee
  javapackforredhat:  java-1.8.0-openjdk
