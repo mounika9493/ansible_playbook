@@ -2,13 +2,13 @@
 - hosts: webservers
   become: yes
   tasks:
-  - name: i want to install java on ubuntu ansible nodes
+  - name: i want to install java on ansible ubuntu nodes
     apt:
      name: "{{javapackforubuntu}}"
      state: present
     when: ansible_os_family =="Debian"
 
-  - name: i want to install java on RedHat ansible nodes  
+  - name: i want to install java on ubuntu RedHat nodes  
     yum:
      name: "{{javapackforredhat}}"
      state: present
