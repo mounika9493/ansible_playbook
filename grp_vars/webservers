@@ -1,7 +1,0 @@
-
----
-
- webpackforubuntu: apache2
- webpackforredhat: httpd
- javapackforubuntu: openjdk-7-jre 
- javapackforredhat:  java-1.7.0-openjdk
