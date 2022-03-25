@@ -8,3 +8,8 @@
 [redhatwebservers]
 172.31.28.202
 
+[webservers:vars]
+ webpackforubuntu= apache2
+ webpackforredhat= httpd
+ javapackforubuntu= openjdk-7-jre 
+ javapackforredhat=  java-1.7.0-openjdk
