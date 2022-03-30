@@ -1,5 +1,5 @@
 ---
   - name: i want to create file  
     file:
-    path: /home/maha/mytestfile
-    state: touch
+     path: /home/maha/ansible_playbook
+     state: touch
