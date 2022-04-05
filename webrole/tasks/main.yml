@@ -5,7 +5,7 @@
    name: apache2
    state: present
 
-- name: copy index file
+- name: copy indexfile
   template:
    src: templates/indexfile.j2
    dest: /var/www/html/index.html
