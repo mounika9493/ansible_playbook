@@ -7,6 +7,6 @@
 
 - name: copy indexfile
   template:
-   src: templates/indexfile.j2
-   dest: /var/www/html/index.html
-   notify: restart webserver
+    src: templates/indexfile.j2
+    dest: /var/www/html/index.html
+  notify: restart webserver
