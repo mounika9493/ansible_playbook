@@ -1,2 +1,4 @@
 ---
 # tasks file for tom8roleubuntu16
+- include_tasks: installjava.yml
+- include_tasks: createtomcatusers.yml
