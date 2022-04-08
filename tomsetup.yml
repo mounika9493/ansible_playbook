@@ -1,6 +1,8 @@
----
-- hosts: 172.31.31.250
+--- 
+- hosts: myapplicationservers
   become: yes
-  roles: {role: tom8roleoubuntu16, when: ansible_os_family =="Debian"}
+  roles:
+  - {role: tom8roleoubuntu16, when: ansible_os_family =="Debian"}
+
 
 
