@@ -10,8 +10,8 @@
    path: /opt/tomcat
    state: directory
 
-- name: i want extract tar file
+- name:  i want extract tar file 
   command:
-    cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
-    creates: /opt/tomcat/LICENSE 
+       cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
+       creates: /opt/tomcat/LICENSE
 
