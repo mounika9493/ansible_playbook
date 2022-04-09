@@ -13,7 +13,7 @@
    mode: g+r
    state: directory
 
-- name:  give the tomcat user to execute access to the directory 
+- name: give the tomcat user to execute access to the directory 
   file:
   path: /opt/tomcat/conf
   mode: g+x
@@ -39,7 +39,7 @@
   recurse: yes
   owner: tomcat
   state: directory
-  
+
 - name: make the tomcat user the owner of the logs
   file:
   path: /opt/tomcat/logs/
