@@ -1,2 +1,5 @@
 ---
 # vars file for tom8roleubuntu16
+
+mysqlpasswd: maha 
+
