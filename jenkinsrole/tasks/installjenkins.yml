@@ -1,7 +1,7 @@
 - name: install jenkins
   get_url:
     url: https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -th/file.conf
-    dest: home/ubuntu/jenkins-ci.org.key
+    dest: home/ubuntu/jenkins
     force_basic_auth: yes
 
 - name: append the Debian package repository    
