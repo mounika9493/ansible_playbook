@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: create aws instance as ansible nodes
+    ec2:
+      key_name: ohio_pem_file
+      instance_type: t2.micro
+      image: ami-0343ceabb7f0ffb98
+      wait: yes
+      group: My Securitygroup
+      region: us-east-2
+      count: 2
+      vpc_subnet_id: subnet-0af6d92f015ea39ec
+      assign_public_ip: yes
+      instance_tags:
+         Name: myAnsiblenode
+
+
+
+
+

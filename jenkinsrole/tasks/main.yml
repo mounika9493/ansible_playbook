@@ -1,2 +1,7 @@
+
 ---
 # tasks file for jenkinsrole
+- include_tasks: installjava.yml
+- include_tasks: installjenkins.yml
+- include_tasks: StartJenkins.yml
+
