@@ -5,18 +5,16 @@
     dest: home/ubuntu/jenkins
     force_basic_auth: yes
 
-- name: Add repository
-  yum_repository:
-    name: epel
-    description: EPEL YUM repo
-    baseurl: https://pkg.jenkins.io/debian/
+- name: add jenkins key
+  apt_key:
+    state: present
+    url: "{{ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key  }}"
 
-- name: Import jenkins key from url
-  ansible.builtin.rpm_key:
-      state: present
-      key: https://pkg.jenkins.io/debian-stable binary/
-
-
+- name: "Set EPEL yum repository"
+  apt_repository:
+      filename: "{{ item.value.name }}"
+      repo: "{{ item.value.url }}"
+      description: "{{ item.value.description }}"
 - name: i want to install jenkins on ubuntu 
   apt:
      name: "{{jenkinsforubuntu}}"
