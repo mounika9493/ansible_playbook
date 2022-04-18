@@ -4,4 +4,8 @@
 - include_tasks: installjava.yml
 - include_tasks: installjenkins.yml
 - include_tasks: StartJenkins.yml
+- include_tasks: firewall.yml
+- include_tasks: settingup.yml
+
+
 

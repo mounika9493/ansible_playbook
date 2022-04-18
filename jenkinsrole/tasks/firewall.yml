@@ -1,0 +1,7 @@
+---
+- name: Allow port 
+  ufw:
+    rule: allow
+    name: OpenSSH
+    port: 8080
+    state: enabled
