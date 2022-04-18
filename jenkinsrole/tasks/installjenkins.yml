@@ -5,10 +5,11 @@
     dest: home/ubuntu/jenkins
     force_basic_auth: yes
 
-- name: add jenkins key
-  apt_key:
-    state: present
-    url: "{{wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add - }}"
+- name: Add repository
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    baseurl: https://pkg.jenkins.io/debian/jenkins-ci.org.key
 
 - name: Import jenkins key from url
   ansible.builtin.rpm_key:
