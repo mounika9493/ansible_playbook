@@ -9,7 +9,7 @@
   yum_repository:
     name: epel
     description: EPEL YUM repo
-    baseurl: https://pkg.jenkins.io/debian/jenkins-ci.org.key
+    baseurl: https://pkg.jenkins.io/debian/
 
 - name: Import jenkins key from url
   ansible.builtin.rpm_key:
