@@ -6,9 +6,9 @@
     force_basic_auth: yes
 
 - name: add jenkins key
-  apt_key:
+  ansible.builtin.apt_repository:
+    repo: "{{ wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add - }}"
     state: present
-    url: "{{ wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add - }}"
 
 - name: "Set EPEL yum repository"
   apt_repository:
