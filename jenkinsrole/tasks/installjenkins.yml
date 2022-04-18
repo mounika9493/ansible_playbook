@@ -7,7 +7,7 @@
 
 - name: ensure the jenkins apt repository key is installed
   apt_key: 
-    url: "{{ https://pkg.jenkins.io/debian-stable/jenkins.io.key }}"
+    url: "{{jenkins.repo_URL}}"
     state: present
     become: yes
 - name: "Set EPEL yum repository"
