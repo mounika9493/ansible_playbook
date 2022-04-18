@@ -8,7 +8,7 @@
 - name: add jenkins key
   apt_key:
     state: present
-    url: "{{ wget -qO -https://pkg.jenkins.io/debian-stable/jenkins.io.key|sudo apt-key add -}}"
+    url: "{{ wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add - }}"
 
 - name: "Set EPEL yum repository"
   apt_repository:
