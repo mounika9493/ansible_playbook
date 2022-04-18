@@ -7,7 +7,7 @@
 
 - name: append the Debian package repository    
   command:
-       cmd: https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+       cmd: https://pkg.jenkins.io/debian-stable binary/ 
        creates: /etc/apt/sources.list.d
 
 - name: i want to install jenkins on ubuntu 
