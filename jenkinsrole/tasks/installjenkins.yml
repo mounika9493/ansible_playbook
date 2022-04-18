@@ -5,10 +5,16 @@
     dest: home/ubuntu/jenkins
     force_basic_auth: yes
 
-- name: append the Debian package repository    
-  command:
-       cmd: https://pkg.jenkins.io/debian-stable binary/ 
-       creates: /etc/apt/sources.list.d
+- name: add jenkins key
+  apt_key:
+    state: present
+    url: "{{ https://pkg.jenkins.io/debian/jenkins-ci.org.key }}"
+
+- name: Import jenkins key from url
+  ansible.builtin.rpm_key:
+      state: present
+      key: https://pkg.jenkins.io/debian-stable binary/
+
 
 - name: i want to install jenkins on ubuntu 
   apt:
