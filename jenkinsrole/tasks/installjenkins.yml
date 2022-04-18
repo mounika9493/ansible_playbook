@@ -7,7 +7,7 @@
 
 - name: add jenkins key
   ansible.builtin.apt_repository:
-    repo: "{{ wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add - }}"
+    repo: wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
     state: present
 
 - name: "Set EPEL yum repository"
