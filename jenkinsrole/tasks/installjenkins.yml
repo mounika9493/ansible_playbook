@@ -8,7 +8,7 @@
 - name: add jenkins key
   apt_key:
     state: present
-    url: "{{ https://pkg.jenkins.io/debian/jenkins-ci.org.key }}"
+    url: "{{ https://pkg.jenkins.io/debian/ }}"
 
 - name: Import jenkins key from url
   ansible.builtin.rpm_key:
