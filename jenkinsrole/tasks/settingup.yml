@@ -1,9 +1,0 @@
----
-- name: Unlock Jenkins screen
-  uri:
-    url:  http://172.31.31.250:8080
-
-- name: we will use the cat command to display the password
-  ansible.builtin.command:
-    cmd: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-    creates: /path/to/password

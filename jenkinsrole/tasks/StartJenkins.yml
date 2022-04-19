@@ -4,3 +4,14 @@
    name: jenkins 
    update_cache: yes
   become: yes
+
+- name: install jenkins
+  apt:
+   name: jenkins
+   state: latest
+
+- name: start jenkins
+  service:
+   name: jenkins
+   enabled: true
+   state: started 
