@@ -3,8 +3,8 @@
 - name: install jenkins
   apt:
    name: jenkins
-   state: latest
-   
+   state: present
+
 - name: start jenkins
   systemd:
     name: jenkins
