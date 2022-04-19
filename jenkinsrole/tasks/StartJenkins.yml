@@ -1,11 +1,14 @@
 ---
+
 - name: install jenkins
   apt:
    name: jenkins
    state: latest
-
+   
 - name: start jenkins
-  service:
-   name: jenkins
-   enabled: true
-   state: started 
+  systemd:
+    name: jenkins
+    state: started
+    daemon_reload: yes
+    enabled: yes
+
