@@ -1,9 +1,10 @@
 ---
 - name: download jenkins repo apt
   apt_key: 
-    url: "{{wget -qO - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -}}"
     state: present
+    url: "{{ wget -qO - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add - }}"
     become: yes
+
 - name: "Set EPEL yum repository"
   apt_repository:
       filename: "{{ item.value.name }}"
