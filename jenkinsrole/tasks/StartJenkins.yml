@@ -1,9 +1,9 @@
 ---
 
-- name: Update repositories cache and install "jenkins" package
+- name: Install the package jenkins
   apt:
     name: jenkins
-    update_cache: yes
+    state: present
 
 - name: start jenkins
   systemd:
