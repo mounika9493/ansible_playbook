@@ -1,19 +1,19 @@
 ---
 - name: download jenkins repo apt
   apt_key: 
-    state: present
-    url: "{{ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add - }}" 
-    become: yes
+   state: present
+   url: "{{wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -}}" 
+  become: yes
 
 - name: "Set EPEL yum repository"
   apt_repository:
       filename: "{{ item.value.name }}"
       repo: "{{ item.value.url }}"
-      description: "{{ item.value.description }}"
+     description: "{{ item.value.description }}"
 - name: i want to install jenkins on ubuntu 
   apt:
      name: "{{jenkinsforubuntu}}"
      state: present
-     when: ansible_os_family =="Debian" 
+    when: ansible_os_family =="Debian" 
      
           
