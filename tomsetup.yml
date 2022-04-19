@@ -1,5 +1,5 @@
 --- 
-- hosts: 172.31.31.250
+- hosts: 172.31.25.227
   become: yes
   roles:
   - {role: tom8roleubuntu16, when: ansible_os_family =="Debian"}
