@@ -1,7 +1,6 @@
 ---
-- name: start jenkins
-  systemd:
-    name: jenkins
-    state: started
-    daemon_reload: yes
-    enabled: yes
+- name: ensure jenkins is installed
+  apt:
+   name: jenkins 
+   update_cache: yes
+  become: yes
