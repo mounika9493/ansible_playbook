@@ -1,8 +1,7 @@
 ---
-- name: Make sure a service unit is running
-  ansible.builtin.systemctl:
-    state: started
+
+- name: ensure jenkins is running
+  service: 
     name: jenkins
-    daemon_reload: yes
-
-
+    enabled: true
+    state: started
