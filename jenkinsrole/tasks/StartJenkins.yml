@@ -1,9 +1,9 @@
 ---
 
-- name: Install the package jenkins
+- name: Install jenkins
   apt:
     name: jenkins
-    state: present
+    state: latest
 
 - name: start jenkins
   systemd:
