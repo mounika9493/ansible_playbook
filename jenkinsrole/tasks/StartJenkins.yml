@@ -1,7 +1,6 @@
 ---
 - name: start jenkins
-  ansible.builtin.systemd:
-    state: restarted
-    daemon_reload: yes
+  ansible.builtin.service:
     name: jenkins
+    state: started
 
