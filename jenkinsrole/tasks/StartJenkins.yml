@@ -2,8 +2,8 @@
  - name: ensure jenkins is installed
    apt:
     name: jenkins 
-   update_cache: yes
     become: yes
+   update_cache: yes  
 
 
  - name: ensure jenkins is running
