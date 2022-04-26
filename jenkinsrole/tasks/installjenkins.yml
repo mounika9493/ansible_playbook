@@ -2,6 +2,7 @@
 - name: download jenkins repo apt
   apt_key: 
    url: https://pkg.jenkins.io/debian/jenkins-ci.org.key 
+   dest: /home/ubuntu/debian/jenkins
    state: present
   become: yes
 
