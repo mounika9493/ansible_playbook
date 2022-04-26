@@ -1,12 +1,12 @@
 ---
- - name: ensure jenkins is installed
-   apt:
+- name: ensure jenkins is installed
+  apt:
     name: jenkins 
     become: yes
-   update_cache: yes  
+  update_cache: yes  
 
 
- - name: ensure jenkins is running
-   service: 
+- name: ensure jenkins is running
+  service: 
     name: jenkins
     state: started
