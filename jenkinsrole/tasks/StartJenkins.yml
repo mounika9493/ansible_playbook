@@ -1,8 +1,8 @@
 ---
-- name: ensure jenkins is installed
-  apt:
-    name: jenkins
-    state: latest  
+- name: Make sure a service unit is running
+  ansible.builtin.systemd:
+    state: started
+    name: httpd
 
 
 - name: ensure jenkins is running
