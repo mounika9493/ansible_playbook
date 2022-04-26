@@ -3,5 +3,5 @@
   ufw:
     rule: allow
     name: OpenSSH
-    port: 8080
+    port: '8080'
     state: enabled
