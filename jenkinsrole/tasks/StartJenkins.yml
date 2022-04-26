@@ -1,7 +1,7 @@
 ---
 
 - name: Install jenkins
-  apt:
+  yum:
     name: jenkins
     state: latest
 
