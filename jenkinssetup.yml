@@ -1,30 +1,10 @@
 --- 
-- hosts: 172.31.31.250
+- hosts: 172.31.20.140
   become: yes
-  tasks:
+  roles:
+  - {role: jenkinsrole, when: ansible_os_family =="Debian"}
+
   
-    - name: Task - 1 Update APT package manager repositories cache
-      become: true
-      apt:
-        update_cache: yes
-    - name: Task -2 Install Java using Ansible
-      become: yes
-      apt:
-        name: openjdk-8-jdk
-        state: present
+    
 
-    - name: ensure the jenkins apt repository key is installed
-      apt_key: url=https://pkg.jenkins.io/debian-stable/jenkins.io.key state=present
-      become: yes
-
-    - name: ensure the repository is configured
-      apt_repository: repo='deb https://pkg.jenkins.io/debian-stable binary/' state=present
-      become: yes
-
-    - name: Make sure a service unit is running
-      ansible.builtin.systemd:
-       state: started
-       name: jenkins
-
-    - name: ensure jenkins is running
-      service: name=jenkins state=started
+    
