@@ -1,14 +1,11 @@
 ---
+ - name: ensure jenkins is installed
+   apt:
+    name: jenkins 
+    update_cache: yes
+    become: yes
 
-- name: Install jenkins
-  yum:
-    name: jenkins
-    state: latest
-
-- name: start jenkins
-  systemd:
+ - name: ensure jenkins is running
+   service: 
     name: jenkins
     state: started
-    daemon_reload: yes
-    enabled: yes
-
