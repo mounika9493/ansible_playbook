@@ -5,8 +5,3 @@
     state: latest  
 
 
-- name: ensure jenkins is running
-  service: 
-    name: jenkins
-    enabled: true
-    state: started
