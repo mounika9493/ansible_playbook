@@ -3,5 +3,6 @@
   ansible.builtin.systemd:
     state: started
     name: jenkins
+    daemon_reload: yes
 
 
