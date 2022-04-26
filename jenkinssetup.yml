@@ -10,11 +10,9 @@
     - name: Task -2 Install Java using Ansible
       become: yes
       apt:
-        name: "{{ packages }}"
+        name: openjdk-8-jdk
         state: present
-      vars:
-        packages:
-           - openjdk-11-jdk
+        
     - name: ensure the jenkins apt repository key is installed
       apt_key: url=https://pkg.jenkins.io/debian-stable/jenkins.io.key state=present
       become: yes
