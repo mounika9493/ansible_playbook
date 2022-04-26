@@ -1,6 +1,6 @@
 ---
-- name: start jenkins
-  ansible.builtin.service:
-    name: Debian
-    state: started
+- name: ensure jenkins is running
+  service:
+      name: jenkins
+      state: started
 
