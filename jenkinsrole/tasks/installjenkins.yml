@@ -1,15 +1,16 @@
 ---
 - name: download jenkins repo apt
   apt_key: 
-   url: https://pkg.jenkins.io/debian/jenkins-ci.org.key 
+   url: https://pkg.jenkins.io/debian-stable/jenkins.io.key 
    state: present
   become: yes
 
 - name: ensure the repository is configured
   apt_repository:
-   repo: 'deb https://pkg.jenkins.io/debian-stable binary/'
+   repo:  https://pkg.jenkins.io/debian-stable binary/
    state: present
-  become: yes  
+   become: yes  
+
 
 - name: update apt cache
   apt:
