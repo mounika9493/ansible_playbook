@@ -1,6 +1,6 @@
 ---
 - name: i want to restart jenkins
-  ansible.builtin.service:
+  ansible.builtin.systemd:
     name: jenkins
     state: started
 
