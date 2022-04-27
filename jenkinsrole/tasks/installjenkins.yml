@@ -8,7 +8,6 @@
 - name: ensure the repository is configured
   apt_repository:
    repo: 'deb https://pkg.jenkins.io/debian-stable binary/'
-   dest: /etc/apt/sources.list.d/jenkins.list
    state: present
   become: yes  
 
